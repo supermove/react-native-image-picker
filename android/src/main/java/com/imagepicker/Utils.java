@@ -391,7 +391,7 @@ public class Utils {
         return fileUris;
     }
 
-    static ReadableMap getImageResponseMap(Uri uri, Options options, Context context) {
+    static WritableMap getImageResponseMap(Uri uri, Options options, Context context) {
         String fileName = uri.getLastPathSegment();
         ImageMetadata imageMetadata = new ImageMetadata(uri, context);
         int[] dimensions = getImageDimensions(uri, context);
@@ -418,7 +418,7 @@ public class Utils {
         return map;
     }
 
-    static ReadableMap getVideoResponseMap(Uri uri, Options options, Context context) {
+    static WritableMap getVideoResponseMap(Uri uri, Options options, Context context) {
         String fileName = uri.getLastPathSegment();
         WritableMap map = Arguments.createMap();
         VideoMetadata videoMetadata = new VideoMetadata(uri, context);
